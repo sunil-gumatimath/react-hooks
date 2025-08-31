@@ -1,18 +1,10 @@
 import './App.css'
-import { useState } from 'react'
+import ColorChnager from './useState Examples/ColorChanger'
 function App() {
-
-  // Simple useState Example
-  const [color, setColor] = useState("Red");
-
-  const changeColor = () => {
-    setColor("Blue")
-  }
 
   return (
     <>
-      <h1>My favorite color is {color}</h1>
-      <button onClick={changeColor}>Blue</button>
+      <ColorChnager />
     </>
   )
 }
