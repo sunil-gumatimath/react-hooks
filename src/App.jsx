@@ -8,9 +8,9 @@ function App() {
 
   return (
     <>
-      {/* <ColorChnager />
+      <ColorChnager />
       <CarExample />
-      <Counter />*/}
+      <Counter />
 
       <CounterLoaded />
       <CounterLoaded_1 />

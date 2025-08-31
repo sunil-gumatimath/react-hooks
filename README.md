@@ -50,6 +50,11 @@ This project includes the following examples of React Hooks:
 *   **Color Changer:** A component that changes its color on button click, showcasing `useState` for managing color state.
 *   **Counter:** A basic counter that increments and decrements, illustrating the use of `useState` for numerical state.
 
+### useEffect
+
+*   **Counter Loaded:** An example that demonstrates how to use `useEffect` to perform side effects, such as fetching data or subscribing to events.
+*   **Counter Loaded 1:** Another example of `useEffect` that showcases a different use case for side effects.
+
 ## Technologies Used
 
 *   [React](https://reactjs.org/)
