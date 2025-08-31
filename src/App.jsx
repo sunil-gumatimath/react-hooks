@@ -1,6 +1,6 @@
 import './App.css'
-import AutoIncrementCounter from './useEffect-demos/AutoIncrementCounter'
-import OneTimeIncrementCounter from './useEffect-demos/OneTimeIncrementCounter'
+import AutoIncrementCounter from './useEffect-Hook/AutoIncrementCounter'
+import OneTimeIncrementCounter from './useEffect-Hook/OneTimeIncrementCounter'
 import RenderCounter from './useRef-demos/RenderCounter'
 import DOMElementReference from './useRef-demos/DOMElementReference'
 import CarObjectUpdater from './useState-demos/CarObjectUpdater'
