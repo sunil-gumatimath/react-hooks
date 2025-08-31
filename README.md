@@ -46,7 +46,8 @@ src/
 │   └── CarObjectUpdater.jsx       # Object state with spread operator
 ├── useEffect-demos/         # useEffect hook examples
 │   ├── AutoIncrementCounter.jsx   # Effect runs on every render
-│   └── OneTimeIncrementCounter.jsx # Effect runs once on mount
+│   ├── OneTimeIncrementCounter.jsx # Effect runs once on mount
+│   └── ContinuousIncrementCounter.jsx # Effect with state dependency loop
 ├── App.jsx                  # Main application component
 └── main.jsx                 # Application entry point
 ```
@@ -84,6 +85,11 @@ src/
 - **Purpose**: Shows useEffect with empty dependency array
 - **Behavior**: Counter increments once after initial component mount
 - **Concepts**: Effect runs only once, component lifecycle, dependency arrays
+
+#### 3. **ContinuousIncrementCounter** (`useEffect-demos/ContinuousIncrementCounter.jsx`)
+- **Purpose**: Shows `useEffect` with a dependency on its own state to create a continuous loop.
+- **Behavior**: Counter increments every 2 seconds. The `useEffect` hook is re-triggered after each state update.
+- **Concepts**: `useEffect` dependency array, creating loops with `useEffect` and `useState`.
 
 ## 🛠 Technologies Used
 
