@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function ColorChnager() {
+function FavoriteColorPicker() {
 
   const [color, setColor] = useState("Red")
 
@@ -16,4 +16,4 @@ function ColorChnager() {
   );
 }
 
-export default ColorChnager;
+export default FavoriteColorPicker;

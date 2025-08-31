@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function CarExample() {
+function CarObjectUpdater() {
 
   const [car, setCar] = useState({
     brand: "ferrari",
@@ -24,4 +24,4 @@ function CarExample() {
   )
 }
 
-export default CarExample;
+export default CarObjectUpdater;

@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 
-function CounterLoaded() {
+function OneTimeIncrementCounter() {
 
-  const [count, setCounter] = useState(0)
+  const [count, setCount] = useState(0);
 
-  // Example 1 without dependency
 
   useEffect(() => {
     setTimeout(() => {
-      setCounter(count => count + 1)
+      setCount(count => count + 1);
     }, 2000)
-  })
+  }, [])
 
   return (
     <div>
@@ -19,4 +18,4 @@ function CounterLoaded() {
   );
 }
 
-export default CounterLoaded;
+export default OneTimeIncrementCounter;

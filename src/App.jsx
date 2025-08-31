@@ -1,19 +1,19 @@
 import './App.css'
-import CounterLoaded from './useEffect Examples/CounterLoaded'
-import CounterLoaded_1 from './useEffect Examples/CounterLoaded_1'
-import CarExample from './useState Examples/CarExample'
-import ColorChnager from './useState Examples/ColorChanger'
-import Counter from './useState Examples/Counter'
+import AutoIncrementCounter from './useEffect-demos/AutoIncrementCounter'
+import OneTimeIncrementCounter from './useEffect-demos/OneTimeIncrementCounter'
+import CarObjectUpdater from './useState-demos/CarObjectUpdater'
+import FavoriteColorPicker from './useState-demos/FavoriteColorPicker'
+import InteractiveCounter from './useState-demos/InteractiveCounter'
 function App() {
 
   return (
     <>
-      <ColorChnager />
-      <CarExample />
-      <Counter />
+      <FavoriteColorPicker />
+      <CarObjectUpdater />
+      <InteractiveCounter />
 
-      <CounterLoaded />
-      <CounterLoaded_1 />
+      <AutoIncrementCounter />
+      <OneTimeIncrementCounter />
     </>
   )
 }

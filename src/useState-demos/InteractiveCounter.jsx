@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Counter() {
+function InteractiveCounter() {
 
   const [count, setCount] = useState(0)
 
@@ -26,4 +26,4 @@ function Counter() {
   );
 }
 
-export default Counter;
+export default InteractiveCounter;
