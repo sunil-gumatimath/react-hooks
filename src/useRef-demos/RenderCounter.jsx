@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-function Example1() {
+function RenderCounter() {
 
   const [value, setValue] = useState(0)
   const count = useRef(0);
@@ -19,4 +19,4 @@ function Example1() {
   );
 }
 
-export default Example1;
+export default RenderCounter;

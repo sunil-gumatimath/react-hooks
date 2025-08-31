@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-function Example2() {
+function DOMElementReference() {
 
   const inputElement = useRef();
 
@@ -17,4 +17,4 @@ function Example2() {
   )
 }
 
-export default Example2;
+export default DOMElementReference;
