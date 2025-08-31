@@ -6,8 +6,8 @@ function App() {
 
   return (
     <>
-      {/* <ColorChnager />*/}
-      {/* <CarExample />*/}
+      <ColorChnager />
+      <CarExample />
       <Counter />
     </>
   )

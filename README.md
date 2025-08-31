@@ -40,7 +40,18 @@ Lints the project files using ESLint to identify and fix stylistic and code qual
 
 Serves the production build from the `dist` folder locally. This is useful for verifying the final build before deployment.
 
+## Examples
+
+This project includes the following examples of React Hooks:
+
+### useState
+
+*   **Car Example:** A simple example demonstrating how to use `useState` to manage a car's state (e.g., color, year, make).
+*   **Color Changer:** A component that changes its color on button click, showcasing `useState` for managing color state.
+*   **Counter:** A basic counter that increments and decrements, illustrating the use of `useState` for numerical state.
+
 ## Technologies Used
 
 *   [React](https://reactjs.org/)
 *   [Vite](https://vitejs.dev/)
+*   [ESLint](https://eslint.org/)
