@@ -1,4 +1,5 @@
 import './App.css'
+import CounterLoaded from './useEffect Examples/CounterLoaded'
 import CarExample from './useState Examples/CarExample'
 import ColorChnager from './useState Examples/ColorChanger'
 import Counter from './useState Examples/Counter'
@@ -6,9 +7,11 @@ function App() {
 
   return (
     <>
-      <ColorChnager />
+      {/* <ColorChnager />
       <CarExample />
-      <Counter />
+      <Counter />*/}
+
+      <CounterLoaded />
     </>
   )
 }
