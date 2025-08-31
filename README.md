@@ -1,12 +1,46 @@
-# React + Vite
+# React Hooks Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was created to explore and demonstrate various React Hooks. It is built using React and Vite.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get a local copy up and running, follow these simple steps.
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Make sure you have Node.js and npm installed on your machine.
+
+### Installation
+
+1. Clone the repo (if you have a remote repository)
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+
+## Available Scripts
+
+In the project directory, you can run the following commands:
+
+### `npm run dev`
+
+Runs the app in development mode.<br />
+Open [http://localhost:5173](http://localhost:5173) (or a similar port) to view it in your browser. The page will automatically reload when you make changes.
+
+### `npm run build`
+
+Builds the app for production to the `dist` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+### `npm run lint`
+
+Lints the project files using ESLint to identify and fix stylistic and code quality issues.
+
+### `npm run preview`
+
+Serves the production build from the `dist` folder locally. This is useful for verifying the final build before deployment.
+
+## Technologies Used
+
+*   [React](https://reactjs.org/)
+*   [Vite](https://vitejs.dev/)
