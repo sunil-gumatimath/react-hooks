@@ -1,12 +1,12 @@
 import './App.css'
-
+import { useState } from 'react'
 function App() {
 
-  let color = 'Red'
+  // Simple useState Example
+  const [color, setColor] = useState("Red");
 
   const changeColor = () => {
-    color = 'Blue'
-    console.log(color)
+    setColor("Blue")
   }
 
   return (
