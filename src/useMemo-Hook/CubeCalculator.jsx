@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 
-function Example1() {
+function CubeCalculator() {
 
   const [number, setNumber] = useState(0);
   const [counter, setCounter] = useState(0);
@@ -24,4 +24,4 @@ function Example1() {
   );
 }
 
-export default Example1;
+export default CubeCalculator;

@@ -49,6 +49,12 @@ The `useRef` hook returns a mutable ref object whose `.current` property is init
 -   **RenderCounter**: Shows how to use `useRef` to count component renders without causing re-renders.
 -   **DOMElementReference**: Demonstrates accessing and manipulating DOM elements with `useRef`.
 
+### `useMemo`
+
+The `useMemo` hook returns a memoized value. It's useful for performance optimizations by avoiding expensive calculations on every render.
+
+-   **CubeCalculator**: A component that demonstrates how to use `useMemo` to memoize the result of an expensive calculation (cubing a number).
+
 ## Technologies Used
 
 -   React

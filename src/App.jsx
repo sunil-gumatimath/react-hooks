@@ -6,7 +6,7 @@ import './App.css'
 // import CarObjectUpdater from './useState-demos/CarObjectUpdater'
 // import FavoriteColorPicker from './useState-demos/FavoriteColorPicker'
 // import InteractiveCounter from './useState-demos/InteractiveCounter'
-import Example1 from './useMemo-Hook/Example1'
+import CubeCalculator from './useMemo-Hook/CubeCalculator'
 
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
 
       {/* <RenderCounter />
       <DOMElementReference />*/}
-      <Example1 />
+      <CubeCalculator />
     </>
   )
 }
