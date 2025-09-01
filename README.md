@@ -132,7 +132,3 @@ This project helps you understand:
 3. Commit your changes (`git commit -m 'Add new hook example'`)
 4. Push to the branch (`git push origin feature/new-hook-example`)
 5. Open a Pull Request
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
