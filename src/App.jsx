@@ -1,4 +1,5 @@
 import './App.css'
+import Example1 from './useLayoutEffect/Example1'
 // import UseCallbackComponent from './useCallback-Hook/useCallbackComponent'
 // import AutoIncrementCounter from './useEffect-Hook/AutoIncrementCounter'
 // import OneTimeIncrementCounter from './useEffect-Hook/OneTimeIncrementCounter'
@@ -27,7 +28,8 @@ function App() {
       {/* <CubeCalculator />*/}
       {/* <UseCallbackComponent /> */}
       {/* <UseContextComponent /> */}
-      <SimpleCounter />
+      {/* <SimpleCounter />*/}
+      < Example1 />
     </>
   )
 }

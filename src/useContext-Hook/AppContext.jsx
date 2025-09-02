@@ -6,7 +6,7 @@ const ContextProvider = (props) => {
   const name = "Ted"
 
   return (
-    <AppContext.Provider value={{phone,name}}>
+    <AppContext.Provider value={{ phone, name }}>
       {props.children}
     </AppContext.Provider>
   )
