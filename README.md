@@ -54,6 +54,18 @@ The `useEffect` hook lets you perform side effects in functional components. It 
 - **`OneTimeIncrementCounter.jsx`** - Counter that increments only once on mount (empty dependency array)
 - **`ContinuousIncrementCounter.jsx`** - Counter that increments every 2 seconds using setTimeout with state dependency
 
+### `useLayoutEffect` Hook
+*Location: `src/useLayoutEffect/`*
+
+The `useLayoutEffect` hook is similar to `useEffect`, but it fires synchronously after all DOM mutations. This is useful when you need to read layout from the DOM and synchronously re-render.
+
+- **`EffectTimingComparison.jsx`** - Demonstrates the execution timing difference between `useEffect` and `useLayoutEffect`:
+  - `useLayoutEffect` runs synchronously after DOM mutations but before the browser paints
+  - `useEffect` runs asynchronously after the browser paints
+  - Check the console to see the execution order: "Message from useLayoutEffect" appears before "Message from useEffect"
+
+**Currently Active Example**: The `useLayoutEffect` hook is currently active, demonstrating the timing differences between `useEffect` and `useLayoutEffect` execution.
+
 ### `useRef` Hook
 *Location: `src/useRef-Hook/`*
 
@@ -74,7 +86,7 @@ The `useMemo` hook returns a memoized value, optimizing performance by avoiding 
 
 The `useCallback` hook returns a memoized callback function. This is useful when passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders.
 
-- **`useCallbackComponent.jsx`** - Shows how to memoize a function to prevent a child component from re-rendering.
+- **`useCallbackComponent.jsx`** - Shows how to memoize a function to prevent a child component from re-rendering
 
 ### `useReducer` Hook
 *Location: `src/useReducer-Hook/`*
@@ -84,9 +96,9 @@ The `useReducer` hook is an alternative to `useState` for managing complex state
 - **`SimpleCounter.jsx`** - A comprehensive counter example demonstrating:
   - Increment and decrement actions
   - Reset functionality
-  - Direct input value setting
+  - Direct input value setting with number input
   - State management with reducer pattern
-  - Action dispatching with different action types
+  - Action dispatching with different action types (`increase`, `decrease`, `input`, `zero`)
 
 ### `useContext` Hook
 *Location: `src/useContext-Hook/`*
@@ -100,10 +112,9 @@ The `useContext` hook allows you to consume React Context without prop drilling.
 - **`Contact.jsx`** - Uses `useContext` to display phone number from context
 - **`Footer.jsx`** - Uses `useContext` to display both phone and name from context
 
-**Current Active Example**: The `useContext` hook is currently active and demonstrates:
+Context values available:
 - Phone: +91 1234567890
 - Name: Ted
-- How context values flow through the component tree
 
 ## 🏗️ Project Structure
 
@@ -125,6 +136,8 @@ react-hooks/
 │   │   ├── AutoIncrementCounter.jsx
 │   │   ├── ContinuousIncrementCounter.jsx
 │   │   └── OneTimeIncrementCounter.jsx
+│   ├── useLayoutEffect/
+│   │   └── EffectTimingComparison.jsx
 │   ├── useRef-Hook/
 │   │   ├── RenderCounter.jsx
 │   │   └── DOMElementReference.jsx
@@ -149,47 +162,102 @@ react-hooks/
 
 ## 🧪 Running Examples
 
-The main `App.jsx` file imports and displays different hook examples. Currently, the `useContext` hook example is active, showing:
+The main `App.jsx` file imports and displays different hook examples. Currently, the `useLayoutEffect` hook example (`EffectTimingComparison`) is active, demonstrating:
 
-- **Profile Component** - Contains Contact component
-- **Contact Component** - Displays phone number from context
-- **Footer Component** - Displays both phone and name from context
+- **Console Output Timing** - Check the browser console to see execution order
+- **useLayoutEffect** - Logs "Message from useLayoutEffect" first (synchronous)
+- **useEffect** - Logs "Message from useEffect" second (asynchronous)
 
 To test other components:
 
-1. Comment out the current `UseContextComponent` import in `App.jsx`
-2. Uncomment the desired imports (e.g., `useState`, `useEffect`, etc.)
-3. Add the component to the JSX return statement
+1. Open `App.jsx`
+2. Comment out the current `EffectTimingComparison` import and component
+3. Uncomment the desired imports and components (e.g., `InteractiveCounter`, `SimpleCounter`, etc.)
 4. Save the file to see the changes in your browser
+
+### Example Component Switching:
+
+```jsx
+// Currently Active
+import EffectTimingComparison from './useLayoutEffect/EffectTimingComparison'
+
+// Available Examples (uncomment to use)
+// import InteractiveCounter from './useState-Hook/InteractiveCounter'
+// import SimpleCounter from './useReducer-Hook/SimpleCounter'
+// import UseContextComponent from './useContext-Hook/useContextComponent'
+// import CubeCalculator from './useMemo-Hook/CubeCalculator'
+// ... and more
+```
 
 ## 🛠️ Technologies Used
 
 - **React 19.1.1** - Modern React with latest features
+- **React DOM 19.1.1** - React DOM rendering
 - **Vite 7.1.2** - Fast build tool and development server
-- **ESLint** - Code linting and formatting
-- **CSS3** - Styling
+- **ESLint 9.33.0** - Code linting and formatting with React-specific rules
+- **CSS3** - Component styling
 
 ## 📚 Learning Objectives
 
 This project helps you understand:
 
-- When and how to use different React Hooks
-- State management patterns with `useState`
-- Complex state management with `useReducer` and the reducer pattern
-- Side effect handling with `useEffect`
-- Performance optimization with `useMemo`
-- DOM manipulation and persistent values with `useRef`
-- Function memoization with `useCallback`
-- **Context API and `useContext` for state sharing without prop drilling**
-- Best practices for functional components
-- Modern React development workflow
+### Hook Fundamentals
+- **`useState`** - State management in functional components
+- **`useEffect`** - Side effects and component lifecycle
+- **`useLayoutEffect`** - Synchronous effects and DOM measurements
+- **`useRef`** - DOM manipulation and persistent values without re-renders
 
-## 🔧 Recent Fixes
+### Performance Optimization
+- **`useMemo`** - Memoizing expensive calculations
+- **`useCallback`** - Memoizing functions to prevent unnecessary re-renders
 
-- **Fixed circular import issues** in context components
-- **Resolved module resolution conflicts** between `.js` and `.jsx` files
-- **Corrected context destructuring** in consumer components
-- **Added proper error boundaries** with StrictMode wrapper
+### Advanced State Management
+- **`useReducer`** - Complex state logic with reducer pattern
+- **`useContext`** - Global state sharing without prop drilling
+
+### Development Best Practices
+- Modern React development workflow with Vite
+- Component composition and reusability
+- Proper state management patterns
+- Performance optimization techniques
+
+## ⚡ Key Features
+
+- **Interactive Examples** - All components include interactive elements to demonstrate hook behavior
+- **Console Logging** - Many examples include console output for learning purposes
+- **Modular Structure** - Each hook is organized in its own directory with focused examples
+- **Modern React** - Built with React 19 and modern development practices
+- **Hot Reloading** - Instant feedback during development with Vite
+- **Comprehensive Coverage** - Includes all essential React hooks with practical examples
+
+## 🔧 Recent Updates
+
+- **Added `useLayoutEffect` hook demonstration** with timing comparison
+- **Updated project structure** to reflect current organization
+- **Fixed import path references** in documentation
+- **Enhanced component descriptions** with more technical details
+- **Added console logging examples** for better learning experience
+
+## 🚀 Quick Start Guide
+
+1. **Clone and Install**:
+   ```bash
+   git clone <repository-url>
+   cd react-hooks
+   npm install
+   ```
+
+2. **Start Development**:
+   ```bash
+   npm run dev
+   ```
+
+3. **Open Browser**: Navigate to `http://localhost:5173`
+
+4. **Explore Examples**: 
+   - Check the console for `useLayoutEffect` timing demonstration
+   - Modify `App.jsx` to try different hook examples
+   - Experiment with component interactions
 
 ## 🤝 Contributing
 
@@ -198,3 +266,10 @@ This project helps you understand:
 3. Commit your changes (`git commit -m 'Add new hook example'`)
 4. Push to the branch (`git push origin feature/new-hook-example`)
 5. Open a Pull Request
+
+## 📖 Additional Resources
+
+- [React Hooks Official Documentation](https://react.dev/reference/react)
+- [useLayoutEffect vs useEffect](https://react.dev/reference/react/useLayoutEffect)
+- [React Performance Optimization](https://react.dev/learn/render-and-commit)
+- [Context API Best Practices](https://react.dev/learn/passing-data-deeply-with-context)
