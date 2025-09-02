@@ -1,5 +1,5 @@
 import './App.css'
-import Example1 from './useLayoutEffect/Example1'
+import EffectTimingComparison from './useLayoutEffect/EffectTimingComparison'
 // import UseCallbackComponent from './useCallback-Hook/useCallbackComponent'
 // import AutoIncrementCounter from './useEffect-Hook/AutoIncrementCounter'
 // import OneTimeIncrementCounter from './useEffect-Hook/OneTimeIncrementCounter'
@@ -29,7 +29,7 @@ function App() {
       {/* <UseCallbackComponent /> */}
       {/* <UseContextComponent /> */}
       {/* <SimpleCounter />*/}
-      < Example1 />
+      < EffectTimingComparison />
     </>
   )
 }

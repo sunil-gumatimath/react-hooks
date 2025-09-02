@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect } from "react";
 
-function Example1() {
+function EffectTimingComparison() {
 
   useEffect(() => {
     console.log('Message from useEffect')
@@ -21,4 +21,4 @@ function Example1() {
   );
 }
 
-export default Example1
+export default EffectTimingComparison
