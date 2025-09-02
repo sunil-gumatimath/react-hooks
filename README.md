@@ -76,6 +76,18 @@ The `useCallback` hook returns a memoized callback function. This is useful when
 
 - **`useCallbackComponent.jsx`** - Shows how to memoize a function to prevent a child component from re-rendering.
 
+### `useReducer` Hook
+*Location: `src/useReducer-Hook/`*
+
+The `useReducer` hook is an alternative to `useState` for managing complex state logic. It follows the reducer pattern and is particularly useful when you have complex state updates or when the next state depends on the previous one.
+
+- **`SimpleCounter.jsx`** - A comprehensive counter example demonstrating:
+  - Increment and decrement actions
+  - Reset functionality
+  - Direct input value setting
+  - State management with reducer pattern
+  - Action dispatching with different action types
+
 ### `useContext` Hook
 *Location: `src/useContext-Hook/`*
 
@@ -120,6 +132,8 @@ react-hooks/
 │   │   └── CubeCalculator.jsx
 │   ├── useCallback-Hook/
 │   │   └── useCallbackComponent.jsx
+│   ├── useReducer-Hook/
+│   │   └── SimpleCounter.jsx
 │   ├── useContext-Hook/
 │   │   ├── AppContext.js
 │   │   ├── AppContext.jsx
@@ -161,6 +175,7 @@ This project helps you understand:
 
 - When and how to use different React Hooks
 - State management patterns with `useState`
+- Complex state management with `useReducer` and the reducer pattern
 - Side effect handling with `useEffect`
 - Performance optimization with `useMemo`
 - DOM manipulation and persistent values with `useRef`
