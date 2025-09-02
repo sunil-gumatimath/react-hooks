@@ -8,7 +8,8 @@ import './App.css'
 // import FavoriteColorPicker from './useState-demos/FavoriteColorPicker'
 // import InteractiveCounter from './useState-demos/InteractiveCounter'
 // import CubeCalculator from './useMemo-Hook/CubeCalculator'
-import UseContextComponent from './useContext-Hook/useContextComponent'
+// import UseContextComponent from './useContext-Hook/useContextComponent'
+import SimpleCounter from './useReducer-Hook/SimpleCounter'
 
 function App() {
 
@@ -25,7 +26,8 @@ function App() {
       <DOMElementReference />*/}
       {/* <CubeCalculator />*/}
       {/* <UseCallbackComponent /> */}
-      <UseContextComponent />
+      {/* <UseContextComponent /> */}
+      <SimpleCounter />
     </>
   )
 }
