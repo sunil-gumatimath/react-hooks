@@ -1,5 +1,5 @@
 import './App.css'
-import UseCallbackComponent from './useCallback-Hook/useCallbackComponent'
+// import UseCallbackComponent from './useCallback-Hook/useCallbackComponent'
 // import AutoIncrementCounter from './useEffect-Hook/AutoIncrementCounter'
 // import OneTimeIncrementCounter from './useEffect-Hook/OneTimeIncrementCounter'
 // import RenderCounter from './useRef-Hook/RenderCounter'
@@ -8,7 +8,7 @@ import UseCallbackComponent from './useCallback-Hook/useCallbackComponent'
 // import FavoriteColorPicker from './useState-demos/FavoriteColorPicker'
 // import InteractiveCounter from './useState-demos/InteractiveCounter'
 // import CubeCalculator from './useMemo-Hook/CubeCalculator'
-
+import UseContextComponent from './useContext-Hook/useContextComponent'
 
 function App() {
 
@@ -24,7 +24,8 @@ function App() {
       {/* <RenderCounter />
       <DOMElementReference />*/}
       {/* <CubeCalculator />*/}
-      <UseCallbackComponent />
+      {/* <UseCallbackComponent /> */}
+      <UseContextComponent />
     </>
   )
 }
