@@ -76,6 +76,23 @@ The `useCallback` hook returns a memoized callback function. This is useful when
 
 - **`useCallbackComponent.jsx`** - Shows how to memoize a function to prevent a child component from re-rendering.
 
+### `useContext` Hook
+*Location: `src/useContext-Hook/`*
+
+The `useContext` hook allows you to consume React Context without prop drilling. It provides a way to share data between components without having to explicitly pass props through every level.
+
+- **`AppContext.js`** - Defines the context with `createContext()` for phone and name values
+- **`AppContext.jsx`** - Context provider component that wraps the app and provides context values
+- **`useContextComponent.jsx`** - Main component demonstrating context consumption
+- **`Profile.jsx`** - Component that renders Contact component
+- **`Contact.jsx`** - Uses `useContext` to display phone number from context
+- **`Footer.jsx`** - Uses `useContext` to display both phone and name from context
+
+**Current Active Example**: The `useContext` hook is currently active and demonstrates:
+- Phone: +91 1234567890
+- Name: Ted
+- How context values flow through the component tree
+
 ## 🏗️ Project Structure
 
 ```
@@ -83,6 +100,11 @@ react-hooks/
 ├── public/
 ├── src/
 │   ├── assets/
+│   ├── components/
+│   │   ├── Contact.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Header.jsx
+│   │   └── Profile.jsx
 │   ├── useState-Hook/
 │   │   ├── InteractiveCounter.jsx
 │   │   ├── FavoriteColorPicker.jsx
@@ -98,6 +120,10 @@ react-hooks/
 │   │   └── CubeCalculator.jsx
 │   ├── useCallback-Hook/
 │   │   └── useCallbackComponent.jsx
+│   ├── useContext-Hook/
+│   │   ├── AppContext.js
+│   │   ├── AppContext.jsx
+│   │   └── useContextComponent.jsx
 │   ├── App.jsx
 │   ├── App.css
 │   ├── main.jsx
@@ -109,11 +135,18 @@ react-hooks/
 
 ## 🧪 Running Examples
 
-The main `App.jsx` file imports and displays different hook examples. By default, only the `UseCallbackComponent` component is active. To test other components:
+The main `App.jsx` file imports and displays different hook examples. Currently, the `useContext` hook example is active, showing:
 
-1. Uncomment the desired imports in `App.jsx`
-2. Add the component to the JSX return statement
-3. Save the file to see the changes in your browser
+- **Profile Component** - Contains Contact component
+- **Contact Component** - Displays phone number from context
+- **Footer Component** - Displays both phone and name from context
+
+To test other components:
+
+1. Comment out the current `UseContextComponent` import in `App.jsx`
+2. Uncomment the desired imports (e.g., `useState`, `useEffect`, etc.)
+3. Add the component to the JSX return statement
+4. Save the file to see the changes in your browser
 
 ## 🛠️ Technologies Used
 
@@ -131,8 +164,17 @@ This project helps you understand:
 - Side effect handling with `useEffect`
 - Performance optimization with `useMemo`
 - DOM manipulation and persistent values with `useRef`
+- Function memoization with `useCallback`
+- **Context API and `useContext` for state sharing without prop drilling**
 - Best practices for functional components
 - Modern React development workflow
+
+## 🔧 Recent Fixes
+
+- **Fixed circular import issues** in context components
+- **Resolved module resolution conflicts** between `.js` and `.jsx` files
+- **Corrected context destructuring** in consumer components
+- **Added proper error boundaries** with StrictMode wrapper
 
 ## 🤝 Contributing
 
