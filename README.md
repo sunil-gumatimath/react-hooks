@@ -69,6 +69,13 @@ The `useMemo` hook returns a memoized value, optimizing performance by avoiding 
 
 - **`CubeCalculator.jsx`** - Demonstrates memoization of expensive calculations (cubing numbers) with a separate counter that doesn't trigger recalculation
 
+### `useCallback` Hook
+*Location: `src/useCallback-Hook/`*
+
+The `useCallback` hook returns a memoized callback function. This is useful when passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders.
+
+- **`useCallbackComponent.jsx`** - Shows how to memoize a function to prevent a child component from re-rendering.
+
 ## 🏗️ Project Structure
 
 ```
@@ -89,6 +96,8 @@ react-hooks/
 │   │   └── DOMElementReference.jsx
 │   ├── useMemo-Hook/
 │   │   └── CubeCalculator.jsx
+│   ├── useCallback-Hook/
+│   │   └── useCallbackComponent.jsx
 │   ├── App.jsx
 │   ├── App.css
 │   ├── main.jsx
@@ -100,7 +109,7 @@ react-hooks/
 
 ## 🧪 Running Examples
 
-The main `App.jsx` file imports and displays different hook examples. By default, only the `CubeCalculator` component is active. To test other components:
+The main `App.jsx` file imports and displays different hook examples. By default, only the `UseCallbackComponent` component is active. To test other components:
 
 1. Uncomment the desired imports in `App.jsx`
 2. Add the component to the JSX return statement
